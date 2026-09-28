@@ -1,0 +1,39 @@
+public class GamingConsolesJava {
+
+    public static void main(String[] args) {
+        String[] cities = { "Capetown", "Port Elizabeth", "Pretoria" };
+        
+       String[] consoles = { "PS5", "XBOX", "SWITCH" };
+       
+       int[][] sales = { {1000, 2000, 3000}, {2000, 3000, 4000}, {1500, 1100, 1200}
+       };
+       
+       System.out.println("GAMING CONSOLE REPORT");
+       
+       System.out.printf("%-20s%-10s %-10s %-10s%n", "CITY", "PS5", "XBOX", "SWITCH");
+       
+       System.out.println("---------------------------");
+       
+       for (int i = 0; i< cities.length; i++) {
+           Sytem.out.printf("%-20s", cities[i]);
+           for (int j = 0; j < consoles.length;j++){
+               System.out.printf("%-10d", sales[i][j]);
+               
+               System.out.println("\nCONSOLE SALES TOTALS FOR EACH CITY");
+               
+               int highsales = 0;
+               String cityWithMostSales ="";
+               
+               for (int i = 0; i < sales.length; i++){
+                   int cityTotal = 0;
+                   for (int j = 0; j< sales[i].length; j++){ cityTotal += sales[i][j];}
+           System.out.println(cities[i] +":"+ cityTotal);
+               }
+               if (cityTotal > highestSales) { highestSales = cityTotal; cityWithMostSales = cities[i];}
+               
+               
+       }
+           
+       }
+    }
+}
